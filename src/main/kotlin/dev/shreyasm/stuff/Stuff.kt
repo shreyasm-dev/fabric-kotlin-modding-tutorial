@@ -3,7 +3,7 @@ package dev.shreyasm.stuff
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
-object ExampleMod : ModInitializer {
+object Stuff : ModInitializer {
   private val logger = LoggerFactory.getLogger("stuff")
 
   override fun onInitialize() {

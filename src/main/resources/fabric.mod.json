@@ -17,7 +17,7 @@
   "entrypoints": {
     "main": [
       {
-        "value": "dev.shreyasm.stuff.ExampleMod",
+        "value": "dev.shreyasm.stuff.Stuff",
         "adapter": "kotlin"
       }
     ],
@@ -29,7 +29,7 @@
     ],
     "fabric-datagen": [
       {
-        "value": "dev.shreyasm.stuff.ExampleModDataGenerator",
+        "value": "dev.shreyasm.stuff.StuffDataGenerator",
         "adapter": "kotlin"
       }
     ]
