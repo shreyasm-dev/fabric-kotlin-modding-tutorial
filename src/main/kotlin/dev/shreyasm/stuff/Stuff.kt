@@ -18,15 +18,17 @@ import org.slf4j.LoggerFactory
 
 
 object Stuff : ModInitializer {
+  val MODID = "stuff"
+
   private val logger = LoggerFactory.getLogger("stuff")
 
   val ICE_CUBE = Registry.register(
     Registries.ITEM,
-    Identifier("stuff", "ice_cube"),
+    Identifier(MODID, "ice_cube"),
     IceCube(FabricItemSettings().maxCount(16).fireproof()),
   )
 
-  private val STUFF_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier("stuff", "stuff_group"))
+  private val STUFF_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier(MODID, "${MODID}_group"))
 
   override fun onInitialize() {
     // This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -39,7 +41,7 @@ object Stuff : ModInitializer {
       STUFF_GROUP,
       FabricItemGroup.builder().icon { ItemStack(ICE_CUBE) }
         .displayName(
-          Text.translatable("itemGroup.stuff.stuff_group")
+          Text.translatable("itemGroup.${MODID}.${MODID}_group")
         )
         .build(),
     )
